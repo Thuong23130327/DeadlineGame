@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dum0g8jpmntbk"]
+
+[ext_resource type="Script" uid="uid://ubgaic5dmq4m" path="res://character_body_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://b85i8pkypn8cm" path="res://icon.svg" id="2_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+
+[node name="Node2D" type="Node2D" unique_id=1434808291]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=79504344]
+script = ExtResource("1_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1504225172]
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2102177577]
+shape = SubResource("RectangleShape2D_0hol4")
+debug_color = Color(0.96583265, 0, 0.48857337, 0.41960785)
