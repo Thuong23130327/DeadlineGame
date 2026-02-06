@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dum0g8jpmntbk"]
+
+[ext_resource type="Script" uid="uid://dpkuwx0xycoyg" path="res://btnHome.gd" id="1_ig7tw"]
+
+[node name="Node2D" type="Node2D" unique_id=1434808291]
+
+[node name="Start" type="Button" parent="." unique_id=232116833]
+offset_left = 416.0
+offset_top = 89.0
+offset_right = 759.0
+offset_bottom = 324.0
+text = "Bắt đầu"
+icon_alignment = 1
+script = ExtResource("1_ig7tw")
+
+[node name="Quit" type="Button" parent="." unique_id=744460325]
+offset_left = 432.0
+offset_top = 402.0
+offset_right = 746.0
+offset_bottom = 555.0
+text = "Thoát"
+script = ExtResource("1_ig7tw")
+
+[connection signal="pressed" from="Start" to="Start" method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_quit_pressed"]

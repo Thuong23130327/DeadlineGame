@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b4lyudfhq5o02"]
+
+[ext_resource type="Texture2D" uid="uid://vx3nm4q07wrf" path="res://Character/Bird/chim/sprite_0.png" id="1_fbu7d"]
+[ext_resource type="Texture2D" uid="uid://cdfcskg0sdcrh" path="res://Character/Bird/chim/sprite_1.png" id="2_qpfut"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wluc2"]
+radius = 43.0
+height = 86.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_podtt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fbu7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qpfut")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 11.0
+}]
+
+[node name="BirdBlue" type="CharacterBody2D" unique_id=1692217394]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=355331402]
+shape = SubResource("CapsuleShape2D_wluc2")
+
+[node name="Container" type="Node2D" parent="." unique_id=1646606026]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Container" unique_id=1050303151]
+position = Vector2(-4, 1.9999999)
+scale = Vector2(0.515625, 0.515625)
+sprite_frames = SubResource("SpriteFrames_podtt")
+animation = &"fly"
+frame_progress = 0.44237965
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1556511444]
